@@ -10,8 +10,8 @@ I chose this corpus because I wonder how this specific lofi hip hop playlist com
 On the one hand I have a feeling a lot of the songs will be slow and not too wild. On the other hand, I wonder whether those playlists contain more exciting songs, to elicit or help sustain a state of flow. Spotify's Global Top 50 will serve as some form of control playlist.
 
 ## Playlist urls
-- https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=XHfoeC3jRVWjmvTKgCpa-A
-- https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ?si=UXiD0CC1RKyoYJ1Igz8lZw
-- https://open.spotify.com/playlist/37i9dQZF1DX3PFzdbtx1Us?si=1XJVB3H1Qoi9rI65WFOznA
-- https://open.spotify.com/playlist/37i9dQZF1DX8NTLI2TtZa6?si=BRA2jOPZRGmvt47OJjBmyA
-- https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=S3zTv68_S8mjn96UFqiopA
+- [lofi hip hop music - beats to relax/study to](https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=XHfoeC3jRVWjmvTKgCpa-A)
+- [Deep Focus](https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ?si=UXiD0CC1RKyoYJ1Igz8lZw)
+- [Music For Concentration](https://open.spotify.com/playlist/37i9dQZF1DX3PFzdbtx1Us?si=1XJVB3H1Qoi9rI65WFOznA)
+- [Intense Studying](https://open.spotify.com/playlist/37i9dQZF1DX8NTLI2TtZa6?si=BRA2jOPZRGmvt47OJjBmyA)
+- [Global Top 50](https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=S3zTv68_S8mjn96UFqiopA)
