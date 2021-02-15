@@ -1,0 +1,59 @@
+---
+title: "Computational Musicology 2021"
+author: "Jason Lam"
+date: "2/10/2021"
+output: html_document
+---
+```
+library(spotifyr)
+library(tidyverse)
+library(ggplot2)
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Computational Musicology course portfolio
+
+In an effort to increase their degree of concentrations, many students will put on some music while studying. One such playlist is the so called lofi hip hop 
+playlist by ChilledCow. This playlist and several other Spotify playlists comprise my music corpus used in this comparison. 
+
+The playlists this corpus consists of can all be found on Spotify. These playlists are called 'lofi hip hop music - beats to relax/study to', 'Deep Focus', 'Music For Concentration', 'Intense Studying' and 'Global Top 50'. Since almost each of the playlists contain hundreds of songs, it is possible that a random selection will occur to reach a more practical corpus size, if necesary.
+
+I chose this corpus because I wonder how this specific lofi hip hop playlist compares to other playlists played while studying. It seems that there are many genres used for this purpose, yet on an individual level people may not like all of those genres. I, for example, listen more to the first playlist. But considering the follower count of the other playlists, there are still plenty of people listening to other ones. So it seems like there is still some kind of common denominator.
+
+On the one hand I have a feeling a lot of the songs will be slow and not too wild. On the other hand, I wonder whether those playlists contain more exciting songs, to elicit or help sustain a state of flow. Spotify's Global Top 50 will serve as some form of control playlist.
+
+## Playlist urls
+- [lofi hip hop music - beats to relax/study to](https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=XHfoeC3jRVWjmvTKgCpa-A)
+- [Deep Focus](https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ?si=UXiD0CC1RKyoYJ1Igz8lZw)
+- [Music For Concentration](https://open.spotify.com/playlist/37i9dQZF1DX3PFzdbtx1Us?si=1XJVB3H1Qoi9rI65WFOznA)
+- [Intense Studying](https://open.spotify.com/playlist/37i9dQZF1DX8NTLI2TtZa6?si=BRA2jOPZRGmvt47OJjBmyA)
+- [Global Top 50](https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF?si=S3zTv68_S8mjn96UFqiopA)
+
+## Downloading Spotify Data
+```{r}
+lfhhm  <- spotifyr::get_playlist_audio_features("","0vvXsWCC9xrXsKd4FyS8kM")
+top50 <- spotifyr::get_playlist_audio_features("","37i9dQZEVXbMDoHDwVN2tF")
+instu <- spotifyr::get_playlist_audio_features("","37i9dQZF1DX8NTLI2TtZa6")
+deefo <- spotifyr::get_playlist_audio_features("","37i9dQZF1DWZeKCadgRdKQ")
+mufco <- spotifyr::get_playlist_audio_features("","37i9dQZF1DX3PFzdbtx1Us")
+
+all <- rbind(lfhhm, top50, instu, deefo, mufco)
+```
+## First plot
+The first plot compares acousticness and speechiness. Interestingly, both the lofi and the top 50 playlists are more spreadout across these features, whereas all the 'Focus' playlists are more clustered in one or more of those features. The latter playlists are in my opinion also more boring.
+```{r, fig.width=12, fig.height=6}
+library(ggplot2)
+ggplot(all, aes(speechiness, acousticness,color=playlist_name,size=energy))+
+  geom_point(alpha=.5,shape=1)+
+  facet_wrap(~playlist_name)+
+  ggtitle("Acousticness vs Speechiness, various playlists")+
+  xlab("Speechiness")+
+  ylab("Acousticness")+
+  theme(legend.position='none')
+
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
